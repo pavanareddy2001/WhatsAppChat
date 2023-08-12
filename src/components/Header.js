@@ -1,25 +1,24 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
 
-const Header = ({ title,lastSeen}) => {
+const Header = ({ title, lastSeen , onBackpress}) => {
   return (
     <View style={styles.mainContainer}>
-      {/* <View style={{justifyContent:"space-between"}}> */}
-      <Image
-        style={styles.iconStyle}
-        source={require("../images/arrowBack.png")}
-      />
+      <TouchableOpacity onPress={onBackpress}>
+        <Image
+          style={styles.iconStyle}
+          source={require("../images/arrowBack.png")}
+        />
+      </TouchableOpacity>
       <Image
         style={styles.profileImg}
         source={require("../images/profileImg.png")}
       />
-      {/* </View> */}
-      <Text style={{ color: "black", fontSize: 16 }}>{title}</Text>
-<Text>{lastSeen}</Text>
-      <Image
-        
-        source={require("../images/icons.png")}
-      />
+      <View style={{ flex: 1 }}>
+        <Text style={styles.headerTitle}>{title}</Text>
+        <Text style={styles.lastSeen}>{lastSeen}</Text>
+      </View>
+      <Image source={require("../images/icons.png")} />
     </View>
   );
 };
@@ -33,17 +32,28 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 72,
     flexDirection: "row",
-    justifyContent: "space-between",
     backgroundColor: "#6D8DAD10",
-    alignItems:"center"
+    alignItems: "center",
+    backgroundColor: "white",
   },
   profileImg: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+    width: 48,
+    height: 48,
+    marginHorizontal: 10,
   },
-  iconStyle:{
+  iconStyle: {
     width: 24,
     height: 24,
-  }
+  },
+  headerTitle:{ 
+    color: "black", 
+    fontSize: 16, 
+    fontWeight: '700' , 
+    marginBottom: 5
+  },
+  lastSeen:{ 
+    color: "gray", 
+    fontSize: 12, 
+    fontWeight: '400' 
+  },
 });

@@ -1,14 +1,13 @@
-# stackOverflowExample
+# WhatsAppChatExample
 React native App 
 
 ## Libray used
-* For Api Call:- fetch.
-* Navigation :- React-navigation , Tab Navigation.
+* Navigation :- React-navigation 
 
 ## Code Setup
 * To Clone this repo 
-* `git clone https://github.com/pavanareddy2001/stackOverflowExample.git`
-*  yarn inatall
+* `git clone https://github.com/pavanareddy2001/WhatsAppChat.git`
+*  yarn install
 
 * To run Android  -  `npx react-native run-android`
 
