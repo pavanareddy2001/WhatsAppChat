@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View ,Image, TouchableOpacity} from 'react-native'
 import React from 'react'
 
-const ChatListingCard = ({profileName,onPressProfile}) => {
+const ChatListingCard = ({profileName,onPressProfile,lastMessage}) => {
   return (
     <View >
         <TouchableOpacity style={styles.mainContainer}
@@ -13,7 +13,10 @@ const ChatListingCard = ({profileName,onPressProfile}) => {
           style={styles.profileImg}
           source={require('../images/loading.png')}
         />
+        <View style={{flexDirection:"row"}}>
       <Text style={styles.profileNameStyle}>{profileName}</Text>
+      <Text>{lastMessage}</Text>
+      </View>
       </TouchableOpacity>
     </View>
   )

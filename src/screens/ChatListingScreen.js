@@ -8,18 +8,22 @@ const ChatListingScreen = (props) => {
         {
             id: 1,
             name: "Dev",
+            lastmessage:"Hello,how r u?"
         },
         {
             id: 2, 
             name: "Meena",
+            lastmessage:"Hello,how r u?"
         },
         {
             id: 3,
             name: "Maya",
+            lastmessage:"Hello,how r u?"
         },
         {
             id: 4,
             name: "krish",
+            lastmessage:"Hello,how r u?"
         },
     ]
   return (
@@ -39,6 +43,7 @@ const ChatListingScreen = (props) => {
             onPressProfile={()=>{
                 props.navigation.navigate("ChatDetail")
             }}
+            lastMessage={item.lastmessage}
             />
         )
      }}

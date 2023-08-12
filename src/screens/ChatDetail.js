@@ -138,8 +138,8 @@ const ChatDetail = () => {
                   },
                 ]}
               >
-                <Text>{item.message}</Text>
-                <Text>{item.time}</Text>
+                <Text style={{color:"black"}}>{item.message}</Text>
+                <Text style={{width:"100%",textAlign:"right",fontSize:12}}>{item.time}</Text>
               </View>
             </View>
           );
@@ -148,13 +148,13 @@ const ChatDetail = () => {
       <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
       <View
         style={{
-          borderWidth: 1,
           borderRadius: 25,
-          width: "80%",
+          width: "85%",
           marginVertical: 10,
-          paddingHorizontal:5,
+          paddingHorizontal:10,
           flexDirection: "row",
           alignItems: "center",
+          backgroundColor:"white"
         }}
       >
         <Image source={require("../images/emoji.png")} />
@@ -187,5 +187,6 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 6,
     borderTopRightRadius: 6,
     backgroundColor: "white",
+    maxWidth:"70%"
   },
 });
